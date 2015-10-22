@@ -1,11 +1,14 @@
 
 public class TicTacToeLogic {
 	private int[][] board; //0 is blank, 1 is player 1's piece, 2 is player 2's piece
+	public TicTacToeLogic(){
+		board=new int[3][3];
+	}
 	public int getCell(int x,int y){
 		return board[x][y];
 	}
 	public void setCell(int x,int y,int p){
-		board[x][y]=p;
+		board[y][x]=p;
 	}
 	public void setCell(int[] move){
 		setCell(move[0],move[1],move[2]);
