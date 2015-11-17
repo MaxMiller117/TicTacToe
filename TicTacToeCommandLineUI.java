@@ -21,4 +21,7 @@ public class TicTacToeCommandLineUI implements TicTacToeInput {
 		return output;
 		//Will return move in form of {x,y,p}
 	}
+	public void win(int player){
+		System.out.println("Player "+player+" wins.");
+	}
 }
