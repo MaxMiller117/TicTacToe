@@ -28,7 +28,7 @@ public class TicTacToeLogic {
       return 0;
    }
    public boolean isValid(int x,int y){
-      return x<3 && y<3 && getCell(x,y)==0;
+      return x<3 && y<3 && (getCell(y,x)==0);
    }
    public boolean isValid(int x,int y,int p){
       return isValid(x,y);
