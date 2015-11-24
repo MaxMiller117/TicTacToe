@@ -15,8 +15,8 @@ public class TicTacToeBasicAI implements TicTacToeAI {
       int win=0;
       for(int i=0;i<3 && win==0;i++){
          for(int j=0;j<3 && win==0;j++){
-            move[0]=i;
-            move[1]=j;
+            move[1]=i;
+            move[0]=j;
             TicTacToeLogic tempLogic=logicCopy(logic);
             if(tempLogic.isValid(i,j)){
                tempLogic.setCell(i,j,p);
@@ -26,8 +26,10 @@ public class TicTacToeBasicAI implements TicTacToeAI {
             	System.out.println("Found winning move.");
          }
       }
-      if(win==0)
+      if(win==0){
          move[0]=-1;
+         System.out.println("No winning move.");
+      }
       return move;
    }
    public int[] getRandom(TicTacToeLogic logic,int p){
